@@ -1,11 +1,11 @@
 # define what dependencies and what version of mermithid to look for
-export P8DEPMERMITHIDBUILD=build-2018-04-20
-export MERMITHIDBRANCH=v0.0.2
+export P8DEPMERMITHIDBUILD=build-2018-04-26
+export MERMITHIDBUILD=v0.0.2.1
 
 # source dependencies
 source /cvmfs/hep.pnnl.gov/project8/dependencies-mermithid/${P8DEPMERMITHIDBUILD}/setup.sh 
 
-export P8MERMITHIDBASEDIR=${P8BASEDIR}/mermithid/${MERMITHIDBRANCH}
+export P8MERMITHIDBASEDIR=${P8BASEDIR}/mermithid/${MERMITHIDBUILD}
 export PATH=${P8MERMITHIDBASEDIR}/bin:${PATH}
 export PYTHONPATH=${P8MERMITHIDBASEDIR}/lib/python3.6/site-packages:${PYTHONPATH} 
 
