@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source /cvmfs/hep.pnnl.gov/project8/mermithid/${MERMITHIDBRANCH}/setup.sh
+# It's assumed that you've already sourced the relevant setup.sh
 
 ########################################################################
 #
@@ -31,8 +31,8 @@ export YAMLCPP_URL=https://github.com/jbeder/yaml-cpp/archive/${YAMLCPP_BRANCH}.
 
 # get into the parent directory for all the source code and build proucts
 cd ${P8MERMITHIDBASEDIR}
-mkdir src
-cd src/
+mkdir -p ${P8MERMITHIDBASEDIR}/src
+cd ${P8MERMITHIDBASEDIR}/src
 pwd
 
 # Because Git does not exist, we have to download manually all items and put them at the right place. 
@@ -47,57 +47,46 @@ echo "Prepare Scarab"
 wget -O scarab-${SCARAB_BRANCH}.zip ${SCARAB_URL} --output-file=wget_log.txt --tries=3
 unzip -q scarab-${SCARAB_BRANCH}.zip
 rm scarab-${SCARAB_BRANCH}.zip
-mv scarab-${SCARAB_BRANCH} Scarab
+mv scarab-${SCARAB_BRANCH} ${P8MERMITHIDBASEDIR}/src/Scarab
 echo "Rapidjson for Scarab"
 wget -O rapidjson-${RAPIDJSON_BRANCH}.zip ${RAPIDJSON_URL} --output-file=wget_log.txt --tries=3
 unzip -q rapidjson-${RAPIDJSON_BRANCH}.zip
 rm rapidjson-${RAPIDJSON_BRANCH}.zip
-mv rapidjson-${RAPIDJSON_BRANCH} rapidjson
-mkdir -p Scarab/library/param/codec/json
-mv rapidjson Scarab/library/param/codec/json
-rm -rf rapidjson
+mv rapidjson-${RAPIDJSON_BRANCH} ${P8MERMITHIDBASEDIR}/src/rapidjson
+mkdir -p ${P8MERMITHIDBASEDIR}/src/Scarab/library/param/codec/json
+mv ${P8MERMITHIDBASEDIR}/src/rapidjson ${P8MERMITHIDBASEDIR}/src/Scarab/library/param/codec/json
 echo "yaml-cpp for Scarab"
 wget -O yaml-cpp-${YAMLCPP_BRANCH}.zip ${YAMLCPP_URL} --output-file=wget_log.txt --tries=3
 unzip -q yaml-cpp-${YAMLCPP_BRANCH}.zip
 rm yaml-cpp-${YAMLCPP_BRANCH}.zip
-mv yaml-cpp-${YAMLCPP_BRANCH} yaml-cpp
-mkdir -p Scarab/library/param/codec/yaml
-mv yaml-cpp Scarab/library/param/codec/yaml
-rm -rf yaml-cpp
+mv yaml-cpp-${YAMLCPP_BRANCH} ${P8MERMITHIDBASEDIR}/src/yaml-cpp
+mkdir -p ${P8MERMITHIDBASEDIR}/src/Scarab/library/param/codec/yaml
+mv ${P8MERMITHIDBASEDIR}/src/yaml-cpp ${P8MERMITHIDBASEDIR}/src/Scarab/library/param/codec/yaml
 echo "Scarab is ready!"
 
 echo "Prepare Phylloxera"
 wget -O phylloxera-${PHYLLOXERA_BRANCH}.zip ${PHYLLOXERA_URL} --output-file=wget_log.txt --tries=3
 unzip -q phylloxera-${PHYLLOXERA_BRANCH}.zip
 rm phylloxera-${PHYLLOXERA_BRANCH}.zip
-mv phylloxera-${PHYLLOXERA_BRANCH} Phylloxera
-cp -r Scarab Phylloxera
-mv Phylloxera mermithid
+mv phylloxera-${PHYLLOXERA_BRANCH} ${P8MERMITHIDBASEDIR}/src/Phylloxera
+cp -r ${P8MERMITHIDBASEDIR}/src/Scarab ${P8MERMITHIDBASEDIR}/src/Phylloxera
+mv ${P8MERMITHIDBASEDIR}/src/Phylloxera ${P8MERMITHIDBASEDIR}/src/mermithid
 echo "Phylloxera is done!"
 
 echo "Prepare Cicada"
 wget -O cicada-${CICADA_BRANCH}.zip ${CICADA_URL} --output-file=wget_log.txt --tries=3
 unzip -q cicada-${CICADA_BRANCH}.zip
 rm cicada-${CICADA_BRANCH}.zip
-mv cicada-${CICADA_BRANCH} Cicada
-cp -r Scarab Cicada
-mv Cicada mermithid
+mv cicada-${CICADA_BRANCH} ${P8MERMITHIDBASEDIR}/src/Cicada
+cp -r ${P8MERMITHIDBASEDIR}/src/Scarab ${P8MERMITHIDBASEDIR}/src/Cicada
+mv ${P8MERMITHIDBASEDIR}/src/Cicada ${P8MERMITHIDBASEDIR}/src/mermithid
 echo "Cicada is done!"
 
 echo "Prepare morpho"
 wget -O morpho-${MORPHO_BRANCH}.zip ${MORPHO_URL} --output-file=wget_log.txt --tries=3
 unzip -q morpho-${MORPHO_BRANCH}.zip
 rm morpho-${MORPHO_BRANCH}.zip
-mv morpho-${MORPHO_BRANCH} morpho
+mv morpho-${MORPHO_BRANCH} ${P8MERMITHIDBASEDIR}/src/morpho
 # cp -r Scarab Cicada
-mv morpho mermithid
+mv ${P8MERMITHIDBASEDIR}/src/morpho ${P8MERMITHIDBASEDIR}/src/mermithid
 echo "Morpho is done!"
-
-echo "Cleaning up Scarab..."
-rm -rf Scarab
-
-cd ../
-ls
-
-
-

@@ -43,7 +43,18 @@ Fixes:
 Log
 ---
 
-Version: build-v0.0.2
+Version: v0.0.2.1
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Release Date: Apr 26 2018
+'''''''''''''''''''''''''
+
+New Features:
+'''''''''''''
+
+* Change dependencies-mermithid to 2018-04-26.
+
+Version: v0.0.2
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Release Date: Apr 20 2018
