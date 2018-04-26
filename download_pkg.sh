@@ -40,25 +40,21 @@ pwd
 echo "Prepare Mermithid"
 wget -O mermithid-${MERMITHID_BRANCH}.zip ${MERMITHID_URL} --output-file=wget_log.txt --tries=3
 unzip -q mermithid-${MERMITHID_BRANCH}.zip
-rm mermithid-${MERMITHID_BRANCH}.zip
 mv mermithid-${MERMITHID_BRANCH} mermithid
 
 echo "Prepare Scarab"
 wget -O scarab-${SCARAB_BRANCH}.zip ${SCARAB_URL} --output-file=wget_log.txt --tries=3
 unzip -q scarab-${SCARAB_BRANCH}.zip
-rm scarab-${SCARAB_BRANCH}.zip
 mv scarab-${SCARAB_BRANCH} ${P8MERMITHIDBASEDIR}/src/Scarab
 echo "Rapidjson for Scarab"
 wget -O rapidjson-${RAPIDJSON_BRANCH}.zip ${RAPIDJSON_URL} --output-file=wget_log.txt --tries=3
 unzip -q rapidjson-${RAPIDJSON_BRANCH}.zip
-rm rapidjson-${RAPIDJSON_BRANCH}.zip
 mv rapidjson-${RAPIDJSON_BRANCH} ${P8MERMITHIDBASEDIR}/src/rapidjson
 mkdir -p ${P8MERMITHIDBASEDIR}/src/Scarab/library/param/codec/json
 mv ${P8MERMITHIDBASEDIR}/src/rapidjson ${P8MERMITHIDBASEDIR}/src/Scarab/library/param/codec/json
 echo "yaml-cpp for Scarab"
 wget -O yaml-cpp-${YAMLCPP_BRANCH}.zip ${YAMLCPP_URL} --output-file=wget_log.txt --tries=3
 unzip -q yaml-cpp-${YAMLCPP_BRANCH}.zip
-rm yaml-cpp-${YAMLCPP_BRANCH}.zip
 mv yaml-cpp-${YAMLCPP_BRANCH} ${P8MERMITHIDBASEDIR}/src/yaml-cpp
 mkdir -p ${P8MERMITHIDBASEDIR}/src/Scarab/library/param/codec/yaml
 mv ${P8MERMITHIDBASEDIR}/src/yaml-cpp ${P8MERMITHIDBASEDIR}/src/Scarab/library/param/codec/yaml
@@ -67,7 +63,6 @@ echo "Scarab is ready!"
 echo "Prepare Phylloxera"
 wget -O phylloxera-${PHYLLOXERA_BRANCH}.zip ${PHYLLOXERA_URL} --output-file=wget_log.txt --tries=3
 unzip -q phylloxera-${PHYLLOXERA_BRANCH}.zip
-rm phylloxera-${PHYLLOXERA_BRANCH}.zip
 mv phylloxera-${PHYLLOXERA_BRANCH} ${P8MERMITHIDBASEDIR}/src/Phylloxera
 cp -r ${P8MERMITHIDBASEDIR}/src/Scarab ${P8MERMITHIDBASEDIR}/src/Phylloxera
 mv ${P8MERMITHIDBASEDIR}/src/Phylloxera ${P8MERMITHIDBASEDIR}/src/mermithid
@@ -76,7 +71,6 @@ echo "Phylloxera is done!"
 echo "Prepare Cicada"
 wget -O cicada-${CICADA_BRANCH}.zip ${CICADA_URL} --output-file=wget_log.txt --tries=3
 unzip -q cicada-${CICADA_BRANCH}.zip
-rm cicada-${CICADA_BRANCH}.zip
 mv cicada-${CICADA_BRANCH} ${P8MERMITHIDBASEDIR}/src/Cicada
 cp -r ${P8MERMITHIDBASEDIR}/src/Scarab ${P8MERMITHIDBASEDIR}/src/Cicada
 mv ${P8MERMITHIDBASEDIR}/src/Cicada ${P8MERMITHIDBASEDIR}/src/mermithid
@@ -85,7 +79,6 @@ echo "Cicada is done!"
 echo "Prepare morpho"
 wget -O morpho-${MORPHO_BRANCH}.zip ${MORPHO_URL} --output-file=wget_log.txt --tries=3
 unzip -q morpho-${MORPHO_BRANCH}.zip
-rm morpho-${MORPHO_BRANCH}.zip
 mv morpho-${MORPHO_BRANCH} ${P8MERMITHIDBASEDIR}/src/morpho
 # cp -r Scarab Cicada
 mv ${P8MERMITHIDBASEDIR}/src/morpho ${P8MERMITHIDBASEDIR}/src/mermithid

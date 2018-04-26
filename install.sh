@@ -44,13 +44,5 @@ pip3 install --prefix=${P8MERMITHIDBASEDIR} .
 # cd examples
 # morpho -c morpho_test/scripts/morpho_linear_fit.yaml 
 
-##########
-# WARNING
-# For some reason, it is bad to remove the sources (else ROOT cannot find the headers...).
-# Don't remove src then!
-# rm -rf ${P8MERMITHIDDIR}/src
-
-echo "Removing old 'current' soft link"
-rm ${P8BASEDIR}/mermithid/current
 echo "Adding new 'current' soft link"
-ln -s ${P8MERMITHIDBASEDIR} ${P8BASEDIR}/mermithid/current
+ln -sf ${P8MERMITHIDBASEDIR} ${P8BASEDIR}/mermithid/current
