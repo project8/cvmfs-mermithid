@@ -13,7 +13,7 @@ export GITHUB_TOKEN=da54a35461cf3993743a6772f88959a6d2a4ad8b
 export GITHUB_USER=project8-machine
 
 export MERMITHID_BRANCH=master
-export MORPHO_BRANCH=master
+export MORPHO_BRANCH=fc04493655ed8dabf01acc1b0c37e700c86f8e2b
 export PHYLLOXERA_BRANCH=master
 export CICADA_BRANCH=master
 export SCARAB_BRANCH=master
@@ -24,7 +24,6 @@ export MERMITHID_URL=https://github.com/project8/mermithid/archive/${MERMITHID_B
 export MORPHO_URL=https://github.com/project8/morpho/archive/${MORPHO_BRANCH}.zip
 export PHYLLOXERA_URL=https://github.com/project8/phylloxera/archive/${PHYLLOXERA_BRANCH}.zip
 export CICADA_URL=https://github.com/project8/cicada/archive/${CICADA_BRANCH}.zip
-echo $CICADA_URL
 export SCARAB_URL=https://github.com/project8/scarab/archive/${SCARAB_BRANCH}.zip
 export RAPIDJSON_URL=https://github.com/Tencent/rapidjson/archive/${RAPIDJSON_BRANCH}.zip
 export YAMLCPP_URL=https://github.com/jbeder/yaml-cpp/archive/${YAMLCPP_BRANCH}.zip

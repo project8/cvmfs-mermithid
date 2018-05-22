@@ -43,6 +43,19 @@ Fixes:
 Log
 ---
 
+
+Version: vX.Y.Z
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Release Date: Apr 26 2018
+'''''''''''''''''''''''''
+
+New Features:
+'''''''''''''
+
+* Update of mermithid to v0.0.3.
+* 
+
 Version: v0.0.2.1
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
