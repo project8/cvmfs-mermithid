@@ -43,6 +43,19 @@ Fixes:
 Log
 ---
 
+
+Version: v0.0.3
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Release Date: May 22 2018
+'''''''''''''''''''''''''
+
+New Features:
+'''''''''''''
+
+* Update of mermithid to v0.0.3.
+* Adding tests at the end of mermithid tests.
+
 Version: v0.0.2.1
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
