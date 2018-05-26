@@ -2,10 +2,10 @@
 
 source /cvmfs/hep.pnnl.gov/project8/mermithid/current/setup.sh
 
-ls /cvmfs/hep.pnnl.gov/project8/mermithid/v0.0.3
-ls /cvmfs/hep.pnnl.gov/project8/mermithid/v0.0.3/src
-ls /cvmfs/hep.pnnl.gov/project8/mermithid/v0.0.3/src/mermithid
-ls /cvmfs/hep.pnnl.gov/project8/mermithid/v0.0.3/src/mermithid/tests
+ls ${P8MERMITHIDBASEDIR}
+ls ${P8MERMITHIDBASEDIR}/src
+ls ${P8MERMITHIDBASEDIR}/src/mermithid
+ls ${P8MERMITHIDBASEDIR}/src/mermithid/tests
 
 cd ${P8MERMITHIDBASEDIR}/src/mermithid/tests
 mkdir ${P8MERMITHIDBASEDIR}/src/mermithid/tests/plots
