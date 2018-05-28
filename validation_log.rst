@@ -44,6 +44,18 @@ Log
 ---
 
 
+Version: v0.0.4
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Release Date: May 26 2018
+'''''''''''''''''''''''''
+
+New Features:
+'''''''''''''
+
+* Update of mermithid to v0.0.4.
+* Validation Log corrections
+
 Version: v0.0.3
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
