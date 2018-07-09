@@ -12,16 +12,14 @@
 export GITHUB_TOKEN=da54a35461cf3993743a6772f88959a6d2a4ad8b
 export GITHUB_USER=project8-machine
 
-export MERMITHID_BRANCH=master
-export MORPHO_BRANCH=fc04493655ed8dabf01acc1b0c37e700c86f8e2b
-export PHYLLOXERA_BRANCH=master
-export CICADA_BRANCH=master
-export SCARAB_BRANCH=master
+export MERMITHID_BRANCH=e8803d9d97679f54e29c429fa832cec21905f302
+export PHYLLOXERA_BRANCH=d361adad61b9740be39862a4cbd6883e3aa9adb0
+export CICADA_BRANCH=9b3bf22244263e01701484186c3fb18f6ef26e67
+export SCARAB_BRANCH=216a11c7831817550201709514ba9fae126f1586
 export RAPIDJSON_BRANCH=5de06bfa37495b529dc00139f1b138a526fff27a
 export YAMLCPP_BRANCH=3757b2023b71d183a341677feee693c71c2e0766
 
 export MERMITHID_URL=https://github.com/project8/mermithid/archive/${MERMITHID_BRANCH}.zip
-export MORPHO_URL=https://github.com/project8/morpho/archive/${MORPHO_BRANCH}.zip
 export PHYLLOXERA_URL=https://github.com/project8/phylloxera/archive/${PHYLLOXERA_BRANCH}.zip
 export CICADA_URL=https://github.com/project8/cicada/archive/${CICADA_BRANCH}.zip
 export SCARAB_URL=https://github.com/project8/scarab/archive/${SCARAB_BRANCH}.zip
@@ -74,11 +72,3 @@ mv cicada-${CICADA_BRANCH} ${P8MERMITHIDBASEDIR}/src/Cicada
 cp -r ${P8MERMITHIDBASEDIR}/src/Scarab ${P8MERMITHIDBASEDIR}/src/Cicada
 mv ${P8MERMITHIDBASEDIR}/src/Cicada ${P8MERMITHIDBASEDIR}/src/mermithid
 echo "Cicada is done!"
-
-echo "Prepare morpho"
-wget -O morpho-${MORPHO_BRANCH}.zip ${MORPHO_URL} --output-file=wget_log.txt --tries=3
-unzip -q morpho-${MORPHO_BRANCH}.zip
-mv morpho-${MORPHO_BRANCH} ${P8MERMITHIDBASEDIR}/src/morpho
-# cp -r Scarab Cicada
-mv ${P8MERMITHIDBASEDIR}/src/morpho ${P8MERMITHIDBASEDIR}/src/mermithid
-echo "Morpho is done!"
