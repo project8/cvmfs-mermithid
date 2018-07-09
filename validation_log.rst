@@ -44,6 +44,40 @@ Log
 ---
 
 
+Version: v1.0.1
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Release Date: July 09 2018
+'''''''''''''''''''''''''
+
+New Features:
+'''''''''''''
+
+* Update of mermithid to v1.0.1.
+* Removing morpho2 as submodule and install it using pip.
+* README update
+
+Fixes:
+''''''
+
+* Validation Log corrections
+
+Version: v0.0.4
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Release Date: May 26 2018
+'''''''''''''''''''''''''
+
+New Features:
+'''''''''''''
+
+* Update of mermithid to v0.0.4.
+
+Fixes:
+''''''
+
+* Validation Log corrections
+
 Version: v0.0.3
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 

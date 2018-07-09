@@ -37,12 +37,8 @@ make install
 cd ${P8MERMITHIDBASEDIR}/src/mermithid
 
 echo "Installing Mermithid"
-pip3 install --prefix=${P8MERMITHIDBASEDIR} morpho/. # install a customized version of morpho until we have a morpho2 release
-pip3 install --prefix=${P8MERMITHIDBASEDIR} .
-
-# Testing if morpho is working
-# cd examples
-# morpho -c morpho_test/scripts/morpho_linear_fit.yaml 
+pip3 install --prefix=${P8MERMITHIDBASEDIR} pip pkgconfig --upgrade
+pip3 install --prefix=${P8MERMITHIDBASEDIR} . --process-dependency-links
 
 echo "Adding new 'current' soft link"
 ln -sf ${P8MERMITHIDBASEDIR} ${P8BASEDIR}/mermithid/current

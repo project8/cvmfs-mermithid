@@ -5,7 +5,8 @@ This repository can be used in two ways:
 1. To install on the actual CVMFS system, use the `run-cvmfs-install.sh` script
 1. To use the docker mockup CVMFS system, use the Dockerfile
 
-When updating the mermithid build on GitHub, please make sure that both `run-cvmfs-install.sh` and `Dockerfile` get updated.  When a new official build is ready, tag it with the build name (the same as the build directory)
+When updating the mermithid build on GitHub, please make sure that both `run-cvmfs-install.sh` and `Dockerfile` get updated.  
+When a new official build is ready, tag it with the build name (the same as the build directory)
 
 ## Information
 
@@ -13,7 +14,9 @@ This repository provides the installation of mermithid on the CVMFS system used 
 
 It's based on the CVMFS-dependencies-mermithid image (https://hub.docker.com/r/project8/cvmfs-dependencies-mermithid).
 
-Project 8 software is installed in the `/cvmfs/hep.pnnl.gov/project8` directory.  From there, installed python packages go in the `mermithid` subdirectory.  For any images based on this image, their software should go in their own directories to avoid issues with directory names that change as builds are updated.  For example:
+Project 8 software is installed in the `/cvmfs/hep.pnnl.gov/project8` directory.  From there, installed python packages go in the `mermithid` subdirectory.  
+For any images based on this image, their software should go in their own directories to avoid issues with directory names that change as builds are updated.  
+For example:
 
 ```
 /cvmfs/hep.pnnl.gov/project8
@@ -28,7 +31,7 @@ Project 8 software is installed in the `/cvmfs/hep.pnnl.gov/project8` directory.
    |
    +- mermithid
    |     |
-   |     +- latest --> v0.0.1
+   |     +- current --> v0.0.1
    |     |
    |     +- v0.0.1
    |           |
