@@ -44,6 +44,18 @@ Log
 ---
 
 
+Version: v1.0.3
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Release Date: July 25 2018
+'''''''''''''''''''''''''
+
+New Features:
+'''''''''''''
+
+* Update of mermithid to v1.0.3.
+* pip3 depreciated: use pip3 to update pip and then use pip
+
 Version: v1.0.1
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
