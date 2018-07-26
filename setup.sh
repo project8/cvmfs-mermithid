@@ -1,6 +1,6 @@
 # define what dependencies and what version of mermithid to look for
 export P8DEPMERMITHIDBUILD=build-2018-04-26
-export MERMITHIDBUILD=v1.0.1
+export MERMITHIDBUILD=v1.0.3
 
 # source dependencies
 source /cvmfs/hep.pnnl.gov/project8/dependencies-mermithid/${P8DEPMERMITHIDBUILD}/setup.sh 
