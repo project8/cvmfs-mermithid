@@ -15,5 +15,5 @@ mv ${SCRIPT_DIR}/download_pkg.sh ${P8MERMITHIDBASEDIR}/download_pkg.sh
 mv ${SCRIPT_DIR}/install.sh ${P8MERMITHIDBASEDIR}/install.sh
 
 # setup the environment and run the install script
-${P8MERMITHIDBASEDIR}/download_pkg.sh
-${P8MERMITHIDBASEDIR}/install.sh
+${P8MERMITHIDBASEDIR}/download_pkg.sh | tee download_log
+${P8MERMITHIDBASEDIR}/install.sh | tee install_log
