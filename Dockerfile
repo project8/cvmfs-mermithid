@@ -1,4 +1,4 @@
-FROM project8/cvmfs-dependencies-mermithid:build-2018-04-26
+FROM project8/cvmfs-dependencies-mermithid:build-2018-07-26
 
 run mkdir -p /tmp_install
 

@@ -36,9 +36,12 @@ make install
 
 cd ${P8MERMITHIDBASEDIR}/src/mermithid
 
-echo "Installing Mermithid"
-pip3 install --prefix=${P8MERMITHIDBASEDIR} pip pkgconfig --upgrade
-pip install --prefix=${P8MERMITHIDBASEDIR} . --process-dependency-links
+# echo "Installing Mermithid"
+
+which pip3
+
+echo "${P8MERMITHIDBASEDIR}/bin/pip3 install --prefix=${P8MERMITHIDBASEDIR} . --process-dependency-links"
+pip3 install --prefix=${P8MERMITHIDBASEDIR} . --process-dependency-links
 
 echo "Adding new 'current' soft link"
 ln -sf ${P8MERMITHIDBASEDIR} ${P8BASEDIR}/mermithid/current
